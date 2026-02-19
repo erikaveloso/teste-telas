@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import { Button } from 'react-native-web'
 
