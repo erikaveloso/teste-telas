@@ -1,21 +1,37 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { Button } from 'react-native-web'
 
-const LoginScreen = () => {
+const CadastroScreen = () => {
 
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
+  const [nome, setNome] = useState('')
+  const [cpf, setCpf] = useState('')
 
   return (
     <View style = {styles.container}>
-      <Text style = {styles.title}>Login</Text>
+      <Text style = {styles.title}>Cadastro</Text>
+
+      <TextInput 
+        placeholder='Digite seu nome'
+        style = {styles.input}
+        value = {nome}
+        onChangeText={setNome}
+      />
 
       <TextInput 
         placeholder='Digite seu email'
         style = {styles.input}
         value = {email}
         onChangeText={setEmail}
+      />
+
+      <TextInput 
+        placeholder='Digite seu CPF'
+        style = {styles.input}
+        value = {cpf}
+        onChangeText={setCpf}
       />
 
       <TextInput 
@@ -26,9 +42,7 @@ const LoginScreen = () => {
         onChangeText={setSenha}
       />
 
-      <Button title = 'Entrar' />
-
-
+      <Button title = 'Cadastrar' />
 
     </View>
   )
@@ -41,4 +55,4 @@ const styles = StyleSheet.create({
   orText: {marginVertical: 20, fontSize: 16, color: '#555'}
 })
 
-export default LoginScreen
+export default CadastroScreen
