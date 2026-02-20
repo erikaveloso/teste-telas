@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View } from 'react-native'
 import LoginScreen from './src/screens/LoginScreen'
 import CadastroScreen from './src/screens/CadastroScreen'
 
-export default function App() {
+const App = () => {
   return (
-    <View style = {{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <LoginScreen />
     </View>
   )
 }
+
+export default App
